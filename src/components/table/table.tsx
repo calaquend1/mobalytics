@@ -1,9 +1,10 @@
 import React from 'react';
 
 export type Table = {
-    name: string;
-}
+  name: string;
+};
+
 export const Table = (props: Table) => {
-    const {name} = props;
-    return (<div>{name}</div>)
+  const { name } = props;
+  return <div>{name}</div>;
 };

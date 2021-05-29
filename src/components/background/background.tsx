@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import {Table} from '../table'
+import { Table } from '../table';
 
 const BackgroundDiv = styled.div`
   width: 80%;
   height: 100vh;
   margin: 10%;
   border: 1px solid black;
-  background-color: #efefef
+  background-color: #efefef;
 `;
 
 const HeaderDiv = styled.div`

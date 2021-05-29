@@ -1,5 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-const Table = () => {}
-
-export default Table
+export type Table = {
+    name: string;
+}
+export const Table = (props: Table) => {
+    const {name} = props;
+    return (<div>{name}</div>)
+};

@@ -1,3 +1,3 @@
 export type Row = {
-    heroName: string
-}
+  heroName: string;
+};

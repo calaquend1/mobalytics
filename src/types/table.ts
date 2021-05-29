@@ -1,5 +1,5 @@
-import {Row} from './row'
+import { Row } from './row';
 
 export type Table = {
-    rows: Array<Row>
-}
+  rows: Array<Row>;
+};

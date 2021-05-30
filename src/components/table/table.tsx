@@ -1,30 +1,21 @@
-import React from 'react';
 import { TableT } from '../../types/table';
-import {RowT} from '../../types/row'
+import { StyledTable, TableContainer } from './styled';
+import { TableHeader } from './header';
+import { Row } from '../row';
 
 export const Table = (props: TableT) => {
-  const { name, parameters = [] } = props;
+  const { name, parameters = [], rows = [] } = props;
   return (
-    <div>
+    <TableContainer>
       <h1>{name}</h1>
-      <table>
+      <StyledTable>
         <TableHeader parameters={parameters} />
-      </table>
-      <div>
-        
-      </div>
-    </div>
+        <tbody>
+          {rows.map((row, i) => (
+            <Row key={i} parameters={parameters} row={row} number={i + 1} />
+          ))}
+        </tbody>
+      </StyledTable>
+    </TableContainer>
   );
 };
-
-const TableHeader = (props: {parameters: Array<keyof RowT>}) => {
-  const {parameters = []} = props
-  return (<thead>
-    <tr>
-      {parameters.map((parameter) => (
-        <th>{parameter}</th>
-      ))}
-    </tr>
-    
-  </thead>)
-}

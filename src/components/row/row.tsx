@@ -1,9 +1,12 @@
-import React from 'react';
-import styled from '@emotion/styled';
+import { RowT } from '../../types/row';
 
-const cell = styled.div`
-  background-color: #cfe2f3;
-`;
-const Row = () => {};
-
-export default Row;
+export const Row = (props: { row: RowT; parameters: Array<keyof RowT>; number: number }) => {
+  const { row, parameters = [], number } = props;
+  return (
+    <tr>
+      {parameters.map((parameter, i) => {
+        return <td key={i}>{parameter !== '#' ? row[parameter] : number}</td>;
+      })}
+    </tr>
+  );
+};

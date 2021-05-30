@@ -1,17 +1,23 @@
-export type Row = {
-  "#": string | number;
+export type RowT = {
   Champion: string;
-  Role: Role;
+  Role: keyof typeof RoleT;
   Games: number;
   WR: string;
   KDA: string;
-  "GD@15": number;
-  "CS/M"?: number;
+  'GD@15': number;
+  'CS/M'?: number;
   DPM?: number;
   KP?: string;
-  "XPD@15"?: number;
-  "CSD@15"?: number;
-  "XP/M"?: number;
+  'XPD@15'?: number;
+  'CSD@15'?: number;
+  'XP/M'?: string;
+  '#'?: string | number;
 };
 
-export type Role = 'Mid' | 'Bot' | 'Adc' | 'Sup' | 'Top'
+enum RoleT {
+  Mid = 'Mid',
+  Bot = 'Bot',
+  Adc = 'Adc',
+  Top = 'Top',
+  Sup = 'Sup',
+}

@@ -1,7 +1,7 @@
-import { Row } from './row';
+import { RowT } from './row';
 
-export type Table = {
-  rows: Array<Row>;
+export type TableT = {
+  rows: Array<RowT>;
   name: string;
-  parameters: Array<keyof Row>
+  parameters: Array<keyof RowT>;
 };

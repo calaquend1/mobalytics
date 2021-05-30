@@ -11,6 +11,7 @@ export const StyledTable = styled.table`
     padding: 0.5em;
     text-align: center;
     font-weight: normal;
+    font-size: 0.75em;
   }
   td:nth-of-type(2) {
     text-align: left;

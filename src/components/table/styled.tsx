@@ -18,5 +18,5 @@ export const StyledTable = styled.table`
 `;
 
 export const TableContainer = styled.div`
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 `;

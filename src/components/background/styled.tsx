@@ -8,20 +8,19 @@ export const BackgroundDiv = styled.div`
     text-align: center;
     font-size: 1em;
     font-weight: normal;
-    margin: 30px 0px;
+    margin: 15px 0px;
   }
 `;
 
 export const HeaderDiv = styled.div`
   display: flow-root;
   border-bottom: 1px solid black;
-  height: 120px;
+  height: 100px;
   background-color: #fff2cc;
   text-align: center;
   h2 {
     font-size: 1em;
     font-weight: normal;
-    padding-top: 20px;
   }
   p {
     display: inline-block;

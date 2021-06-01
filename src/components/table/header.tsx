@@ -5,8 +5,8 @@ export const TableHeader = (props: { columns: Array<keyof RowT> }) => {
   return (
     <thead>
       <tr>
-        {columns.map((parameter, i) => (
-          <th key={i}>{parameter}</th>
+        {columns.map((columnName, i) => (
+          <th key={i}>{columnName}</th>
         ))}
       </tr>
     </thead>

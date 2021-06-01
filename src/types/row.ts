@@ -1,18 +1,26 @@
-export type RowT = {
+type CommonRowFields = {
   Champion: string;
   Role: keyof typeof RoleT;
   Games: number;
   WR: string;
   KDA: string;
   'GD@15': number;
-  'CS/M'?: number;
-  DPM?: number;
-  KP?: string;
-  'XPD@15'?: number;
-  'CSD@15'?: number;
-  'XP/M'?: string;
-  '#'?: string | number;
-};
+  '#': string | number;
+}
+
+type ChampionsFields = {
+  DPM: number;
+  KP: string;
+  'CS/M': number;
+}
+
+type MatchupFields = {
+  'XPD@15': number;
+  'CSD@15': number;
+  'XP/M': string;
+}
+
+export type RowT = CommonRowFields & (ChampionsFields | MatchupFields)
 
 enum RoleT {
   Mid = 'Mid',

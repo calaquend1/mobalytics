@@ -89,6 +89,6 @@ export const matchup = {
       'XP/M': '23,313',
     },
   ],
-  parameters: ['#', 'Champion', 'Role', 'Games', 'WR', 'KDA', 'XPD@15', 'GD@15', 'CSD@15', 'XP/M'],
+  columns: ['#', 'Champion', 'Role', 'Games', 'WR', 'KDA', 'XPD@15', 'GD@15', 'CSD@15', 'XP/M'],
   name: 'Matchup Pool',
 };

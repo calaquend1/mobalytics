@@ -4,15 +4,15 @@ import { TableHeader } from './header';
 import { Row } from '../row';
 
 export const Table = (props: TableT) => {
-  const { name, parameters = [], rows = [] } = props;
+  const { name, columns = [], rows = [] } = props;
   return (
     <TableContainer>
       <h1>{name}</h1>
       <StyledTable>
-        <TableHeader parameters={parameters} />
+        <TableHeader columns={columns} />
         <tbody>
           {rows.map((row, i) => (
-            <Row key={i} parameters={parameters} row={row} number={i + 1} />
+            <Row key={i} columns={columns} row={row} number={i + 1} />
           ))}
         </tbody>
       </StyledTable>

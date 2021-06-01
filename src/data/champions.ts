@@ -89,6 +89,6 @@ export const champions = {
       KP: '47.1%',
     },
   ],
-  parameters: ['#', 'Champion', 'Role', 'Games', 'WR', 'KDA', 'CS/M', 'GD@15', 'DPM', 'KP'],
+  columns: ['#', 'Champion', 'Role', 'Games', 'WR', 'KDA', 'CS/M', 'GD@15', 'DPM', 'KP'],
   name: 'Champions Pool',
 };

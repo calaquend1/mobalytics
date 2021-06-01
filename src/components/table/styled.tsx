@@ -13,9 +13,6 @@ export const StyledTable = styled.table`
     font-weight: normal;
     font-size: 0.75em;
   }
-  td:nth-of-type(2) {
-    text-align: left;
-  }
 `;
 
 export const TableContainer = styled.div`

@@ -1,11 +1,11 @@
 import { RowT } from '../../types/row';
 
-export const TableHeader = (props: { parameters: Array<keyof RowT> }) => {
-  const { parameters = [] } = props;
+export const TableHeader = (props: { columns: Array<keyof RowT> }) => {
+  const { columns = [] } = props;
   return (
     <thead>
       <tr>
-        {parameters.map((parameter, i) => (
+        {columns.map((parameter, i) => (
           <th key={i}>{parameter}</th>
         ))}
       </tr>

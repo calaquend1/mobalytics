@@ -1,11 +1,12 @@
 import { RowT } from '../../types/row';
+import { StyledCell } from './styled'
 
-export const Row = (props: { row: RowT; parameters: Array<keyof RowT>; number: number }) => {
-  const { row, parameters = [], number } = props;
+export const Row = (props: { row: RowT; columns: Array<keyof RowT>; number: number }) => {
+  const { row, columns = [], number } = props;
   return (
     <tr>
-      {parameters.map((parameter, i) => {
-        return <td key={i}>{parameter !== '#' ? row[parameter] : number}</td>;
+      {columns.map((parameter, i) => {
+        return <StyledCell align={parameter === 'Champion' ? 'left' : 'center'} key={i}>{parameter !== '#' ? row[parameter] : number}</StyledCell>;
       })}
     </tr>
   );

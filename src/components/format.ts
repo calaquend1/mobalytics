@@ -1,5 +1,5 @@
 export const formatter = (columnName: string, value: string | number) => {
-  if (!value) return ''
+  if (!value) return '';
   const columnValue = value.toString();
   if (columnName === 'Role') {
     return columnValue.slice(0, 3);

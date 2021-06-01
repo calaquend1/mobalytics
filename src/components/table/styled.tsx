@@ -9,7 +9,6 @@ export const StyledTable = styled.table`
     border: 1px solid black;
     width: auto;
     padding: 0.5em;
-    text-align: center;
     font-weight: normal;
     font-size: 0.75em;
   }

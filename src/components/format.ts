@@ -1,4 +1,5 @@
-export const formatter = (columnName: string, value: string | number = '') => {
+export const formatter = (columnName: string, value: string | number) => {
+  if (!value) return ''
   const columnValue = value.toString();
   if (columnName === 'Role') {
     return columnValue.slice(0, 3);
@@ -17,7 +18,7 @@ export const formatter = (columnName: string, value: string | number = '') => {
     return `${output}%`;
   }
   if (columnName === 'XP/M') {
-    const [integer, fractional] = columnValue.split(',');
+    const [integer, fractional = '0'] = columnValue.split(',');
     return `${integer},${fractional.slice(0, 3)}`;
   }
   if (columnName === 'KDA') {
